@@ -1,0 +1,20 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/api/health"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[variables]
+PORT = "3000"
+NODE_ENV = "production"
+NEXTAUTH_URL = ""
+NEXT_PUBLIC_VIEWER_URL = ""
+ENCRYPTION_SECRET = ""
+NEXTAUTH_SECRET = ""
+DATABASE_URL = ""
+ADMIN_EMAIL = ""
+DISABLE_SIGNUP = "false"
